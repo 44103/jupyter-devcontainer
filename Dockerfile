@@ -26,8 +26,7 @@ RUN conda config --add channels pytorch \
   && conda clean --all -f -y
 
 # Install jupyter extensions
-RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension \
-  && jupyter labextension install @jupyter-widgets/jupyterlab-manager
+RUN jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 ENV TZ=Asia/Tokyo
 RUN zsh -c "$(curl -L raw.github.com/44103/dotfiles/main/install.sh)"
