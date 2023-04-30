@@ -1,0 +1,24 @@
+{
+  "name": "Jupyter Lab",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "jupyter",
+  "remoteUser": "root",
+  "settings": {
+    "terminal.integrated.shell.linux": "zsh"
+  },
+  "workspaceFolder": "/workdir",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "fabiospampinato.vscode-todo-plus",
+        "shardulm94.trailing-spaces",
+        "patbenatar.advanced-new-file",
+        "sleistner.vscode-fileutils",
+        "mhutchie.git-graph"
+      ]
+    }
+  },
+  "postStartCommand": "jupyter lab --allow-root --no-browser --ip=* --NotebookApp.token=''"
+}
