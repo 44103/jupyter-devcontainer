@@ -7,8 +7,6 @@ services:
     volumes:
       - ~/.gitconfig:/home/root/.gitconfig:ro
       - ..:/workdir
-    # ports:
-    #   - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
       - NVIDIA_VISIBLE_DEVICES=all
@@ -19,4 +17,3 @@ services:
       - /dev/nvidia-modeset:/dev/nvidia-modeset
       - /dev/nvidia-uvm:/dev/nvidia-uvm
       - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
-    # command: jupyter lab --allow-root --no-browser --port=8888 --ip=* --NotebookApp.token=''
